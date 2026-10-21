@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grupo Ávila Goulart</title>
+<meta name="description" content="O Grupo Ávila Goulart reúne participações nas áreas imobiliária e de consultoria de gestão, com atividade centrada nos Açores.">
+<link rel="canonical" href="https://avilagoulart.pt/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="pt_PT">
+<meta property="og:title" content="Grupo Ávila Goulart">
+<meta property="og:description" content="Um nome que acrescenta confiança.">
+<meta property="og:url" content="https://avilagoulart.pt/">
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<meta name="theme-color" content="#005B67">
+<link rel="preload" href="fonts/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:'Source Sans 3';font-weight:400;font-display:swap;src:url(fonts/source-sans-3-latin-400-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Sans 3';font-weight:500;font-display:swap;src:url(fonts/source-sans-3-latin-500-normal.woff2) format('woff2')}
+@font-face{font-family:'Source Sans 3';font-weight:600;font-display:swap;src:url(fonts/source-sans-3-latin-600-normal.woff2) format('woff2')}
+:root{--pet:#005B67;--agua:#9BC7CF;--tinta:#1A1A1A;--cinza:#5E6A6D;--nevoa:#EEF4F5;--linha:#C9DFE3}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:'Source Sans 3',Arial,Helvetica,sans-serif;color:var(--tinta);background:#fff;font-size:19px;line-height:1.65;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+h1,h2,h3,p{margin:0}
+h1,h2,h3{text-wrap:balance;font-weight:600}
+p{text-wrap:pretty}
+a{color:var(--pet)}
+a:focus-visible{outline:3px solid var(--pet);outline-offset:3px}
+.esc a:focus-visible{outline-color:#fff}
+.saltar{position:absolute;left:-9999px;top:8px;background:#fff;padding:10px 16px;z-index:60}.saltar:focus{left:16px}
+.wrap{max-width:1180px;margin:0 auto;padding:0 40px}
+@media (max-width:640px){.wrap{padding:0 22px}body{font-size:18px}}
+.esc{background:var(--pet);color:#fff}
+.etq{font-size:15px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--pet)}
+.esc .etq{color:#fff}
+.t-xl{font-size:clamp(44px,6.4vw,96px);line-height:1;letter-spacing:-.03em}
+.t-l{font-size:clamp(32px,3.8vw,54px);line-height:1.08;letter-spacing:-.025em}
+/* topo */
+.topo{border-bottom:1px solid var(--linha)}
+.topo .wrap{height:88px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.topo img{height:40px;width:auto}
+.topo nav{display:flex;gap:32px;font-size:17px;font-weight:500}
+.topo nav a{color:var(--tinta);text-decoration:none;padding-bottom:3px;background:linear-gradient(var(--pet),var(--pet)) 0 100%/0 1px no-repeat;transition:background-size .3s ease}
+.topo nav a:hover{background-size:100% 1px}
+@media (max-width:760px){.topo nav{display:none}.topo img{height:34px}}
+/* abertura */
+.hero{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,.6fr);gap:48px;align-items:end;padding-top:140px;padding-bottom:140px}
+@media (max-width:860px){.hero{grid-template-columns:1fr;padding-top:88px;padding-bottom:96px}}
+.hero h1{color:var(--pet);max-width:12ch}
+.hero .lead{margin-top:40px;max-width:30em;font-size:clamp(20px,1.7vw,23px);line-height:1.55}
+.hero .simb{justify-self:end;width:min(220px,40vw);opacity:0;animation:surgir 1.4s ease .3s forwards}
+@media (max-width:860px){.hero .simb{justify-self:start;width:120px;order:-1}}
+@keyframes surgir{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+/* quem */
+.quem{padding:120px 0;border-top:1px solid var(--linha)}
+.quem .grid{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:32px 80px}
+@media (max-width:860px){.quem .grid{grid-template-columns:1fr}}
+.quem p+p{margin-top:24px}
+.citacao{margin-top:48px;padding-left:28px;border-left:2px solid var(--agua);font-size:clamp(22px,2vw,27px);line-height:1.45;color:var(--pet);font-weight:500;max-width:30em}
+/* marcas */
+.marcas{padding:120px 0 128px}
+.marcas h2{max-width:18ch}
+.duas{margin-top:72px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));border-top:1px solid rgba(155,199,207,.5)}
+@media (max-width:760px){.duas{grid-template-columns:1fr}}
+.marca{padding:44px 40px 44px 0}
+.marca+.marca{border-left:1px solid rgba(155,199,207,.5);padding-left:40px}
+@media (max-width:760px){.marca{padding:40px 0}.marca+.marca{border-left:0;border-top:1px solid rgba(155,199,207,.5);padding-left:0}}
+.marca .area{font-size:15px;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:#fff}
+.marca h3{margin-top:14px;font-size:clamp(30px,3vw,42px);letter-spacing:-.02em;line-height:1.1}
+.marca p{margin-top:16px;max-width:26em}
+.marca .logo-marca{margin-top:28px;margin-bottom:12px}
+.marca .logo-marca img{height:150px;width:auto}
+@media (max-width:640px){.marca .logo-marca img{height:120px}}
+.marca .ir{display:inline-block;margin-top:28px;color:#fff;font-weight:600;text-decoration:underline;text-underline-offset:6px;text-decoration-thickness:1px}
+.marca .ir:hover{text-decoration-thickness:2px}
+.marca .breve{display:inline-block;margin-top:28px;font-size:16px;color:#fff;opacity:.85}
+/* missão */
+.mv{padding-top:128px;padding-bottom:128px;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:56px 96px}
+@media (max-width:760px){.mv{grid-template-columns:1fr;padding-top:96px;padding-bottom:96px}}
+.mv p{margin-top:20px;font-size:clamp(21px,1.9vw,26px);line-height:1.45;color:var(--pet);font-weight:500}
+/* valores */
+.valores{background:var(--nevoa);padding:120px 0}
+.lista{margin-top:56px;border-top:1px solid var(--linha)}
+.valor{display:grid;grid-template-columns:minmax(0,.7fr) minmax(0,1.3fr);gap:8px 48px;padding:30px 0;border-bottom:1px solid var(--linha);align-items:baseline}
+@media (max-width:700px){.valor{grid-template-columns:1fr}}
+.valor h3{font-size:clamp(24px,2.2vw,30px);color:var(--pet);letter-spacing:-.015em}
+
+.hero .simb{justify-self:end;align-self:end;width:min(300px,30vw);margin-bottom:8px}
+.grupo{padding:120px 0;border-top:1px solid var(--linha)}
+.grupo .grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:40px clamp(48px,7vw,112px);align-items:center}
+@media (max-width:860px){.grupo .grid{grid-template-columns:1fr}}
+.grupo figure{margin:0}
+.grupo figure img{width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.grupo figcaption{margin-top:12px;font-size:14px;color:var(--cinza)}
+@media (max-width:860px){.grupo figure{max-width:440px}}
+.grupo h2{color:var(--pet);margin-bottom:32px}
+.grupo .txt p+p{margin-top:22px}
+.visao{padding-top:136px;padding-bottom:120px}
+.visao .frase{font-size:clamp(30px,3.6vw,52px);line-height:1.15;letter-spacing:-.025em;font-weight:600;color:var(--pet);max-width:30ch}
+.visao .missao{margin-top:56px;display:grid;grid-template-columns:minmax(0,.4fr) minmax(0,1fr);gap:12px 48px;border-top:1px solid var(--linha);padding-top:32px}
+@media (max-width:760px){.visao .missao{grid-template-columns:1fr}}
+.visao .missao h3{font-size:20px;color:var(--pet)}
+.visao .missao p{max-width:38em}
+/* contacto */
+.contacto .wrap{padding-top:120px;padding-bottom:96px}
+.contacto h2{margin:0}
+.contacto .mail{display:inline-block;margin-top:36px;font-size:clamp(24px,2.6vw,34px);font-weight:600;color:#fff;text-decoration:underline;text-underline-offset:8px;text-decoration-thickness:1px}
+.contacto .mail:hover{text-decoration-thickness:2px}
+.contacto .info{margin-top:40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(280px,100%),1fr));gap:24px 48px;font-size:17px}
+.contacto .info p{max-width:28em}
+address{font-style:normal}
+.rodape{border-top:1px solid rgba(155,199,207,.5)}
+.rodape .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px;padding-top:28px;padding-bottom:32px;font-size:15px}
+.rodape img{height:30px;width:auto}
+@supports (animation-timeline: view()){.rv{animation:surgir linear both;animation-timeline:view();animation-range:entry 0% cover 25%}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.hero .simb,.rv{animation:none!important;opacity:1!important;transform:none!important}}
+</style>
+</head>
+<body>
+<a class="saltar" href="#conteudo">Saltar para o conteúdo</a>
+<header class="topo">
+<div class="wrap">
+<a href="#topo" aria-label="Grupo Ávila Goulart, início"><img src="img/avilagoulart_horizontal_positivo.svg" alt="Ávila Goulart" width="160" height="40"></a>
+<nav aria-label="Principal">
+<a href="#grupo">O Grupo</a>
+<a href="#marcas">Marcas</a>
+<a href="#valores">Valores</a>
+<a href="#contacto">Contacto</a>
+</nav>
+</div>
+</header>
+
+<main id="conteudo">
+<section id="topo" class="wrap hero">
+<div>
+<h1 class="t-xl">Um nome que acrescenta confiança.</h1>
+<p class="lead">O Grupo Ávila Goulart reúne participações nas áreas imobiliária e de consultoria de gestão, com atividade centrada nos Açores.</p>
+</div>
+<img class="simb" src="img/avilagoulart_simbolo_positivo.svg" alt="" width="220" height="292" aria-hidden="true">
+</section>
+
+<section id="grupo" class="grupo">
+<div class="wrap grid">
+<figure class="rv"><picture><source srcset="img/janela-pico.webp" type="image/webp"><img src="img/janela-pico.jpg" alt="A montanha do Pico vista através da janela de uma construção em pedra, com o mar em primeiro plano" width="960" height="1200" loading="lazy" decoding="async"></picture><figcaption>Fotografia: Manuel Helder Silveira</figcaption></figure>
+<div class="txt rv">
+<h2 class="t-l">Uma casa do Pico.</h2>
+<p>Nascida nas Lajes do Pico em 2015, a Ávila Goulart reúne, acolhe e governa as iniciativas do Grupo. Não vende serviços diretamente: garante a sua integridade.</p>
+<p>Cada empresa que opera sob o seu nome fá-lo com a mesma exigência, a mesma palavra dada e a mesma visão de longo prazo que sempre uniram a família que lhe deu origem.</p>
+<p class="citacao">Um lar açoriano não se mede pela imponência das suas paredes, mas pela capacidade dos seus laços resistirem ao tempo.</p>
+</div>
+</div>
+</section>
+
+<section id="marcas" class="esc marcas">
+<div class="wrap">
+<h2 class="t-l rv">A holding garante. As marcas operam.</h2>
+<div class="duas">
+<div class="marca rv">
+<p class="area">Imobiliário</p>
+<h3 class="logo-marca"><img src="img/atlanticusguarida_vertical_negativo.svg" alt="Atlanticus Guarida" width="130" height="150"></h3>
+<p>Compra, venda, reabilitação, arrendamento e gestão de ativos imobiliários no Pico.</p>
+<span class="breve">Site em preparação</span>
+</div>
+<div class="marca rv">
+<p class="area">Consultoria</p>
+<h3 class="logo-marca"><img src="img/goalart_vertical_negativo.svg" alt="GOALart" width="144" height="150"></h3>
+<p>Consultoria em desenvolvimento organizacional e implementação, para empresas, setor público e instituições sociais.</p>
+<a class="ir" href="https://goalart.pt">goalart.pt</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="wrap visao">
+<p class="frase rv">Ser a referência de solidez empresarial familiar nos Açores: um nome que, colocado ao lado de qualquer negócio, acrescenta confiança antes de acrescentar qualquer outra coisa.</p>
+<div class="missao rv"><h3>A nossa missão</h3><p>Preservar, valorizar e transmitir o património do Grupo, patrimonial, empresarial e humano, assegurando às empresas participadas a estabilidade, a governação e a visão de longo prazo necessárias ao seu crescimento autónomo.</p></div>
+</section>
+
+<section id="valores" class="valores">
+<div class="wrap">
+<h2 class="t-l rv" style="color:var(--pet)">O que não negociamos</h2>
+<div class="lista">
+<div class="valor rv"><h3>Permanência</h3><p>Decidimos a pensar na geração seguinte, não no trimestre seguinte.</p></div>
+<div class="valor rv"><h3>Palavra dada</h3><p>O contrato formaliza; não substitui o compromisso.</p></div>
+<div class="valor rv"><h3>Enraizamento</h3><p>Somos do Pico. Isso não é um detalhe biográfico: é o modo como trabalhamos.</p></div>
+<div class="valor rv"><h3>Discrição</h3><p>A solidez não precisa de ser anunciada. Demonstra-se.</p></div>
+<div class="valor rv"><h3>Rigor</h3><p>A confiança de terceiros no Grupo é um ativo. Administra-se como tal.</p></div>
+</div>
+</div>
+</section>
+</main>
+
+<section id="contacto" class="esc contacto">
+<div class="wrap">
+<h2 class="t-l">Falemos.</h2>
+<p style="margin-top:16px;font-size:20px">Assuntos institucionais e de governação do Grupo.</p>
+<a class="mail" href="mailto:geral@avilagoulart.pt">geral@avilagoulart.pt</a>
+<div class="info">
+<address>Rua Dr. Machado Serpa, 9<br>9930-146 Lajes do Pico<br>Açores</address>
+<p>Para imobiliário ou consultoria, contacte diretamente a Atlanticus Guarida ou a GOALart.</p>
+</div>
+</div>
+<footer class="rodape">
+<div class="wrap">
+<img src="img/avilagoulart_horizontal_negativo.svg" alt="Ávila Goulart" width="120" height="30">
+<span>Ávila Goulart, Lda · NIPC 513484132</span>
+</div>
+</footer>
+</section>
+</body>
+</html>
