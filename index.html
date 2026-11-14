@@ -15,8 +15,9 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
-<meta name="theme-color" content="#005B67">
+<link rel="icon" href="img/favicon.svg?v=3" type="image/svg+xml">
+<link rel="icon" href="favicon.ico?v=3" sizes="48x48">
+<link rel="apple-touch-icon" href="apple-touch-icon.png?v=3"><meta name="theme-color" content="#005B67">
 <meta name="color-scheme" content="light">
 <link rel="preload" href="fonts/source-sans-3-latin-600-normal.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="fonts/source-sans-3-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
@@ -43,7 +44,7 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--pet);outline-offse
 /* cabeçalho */
 .topo{position:sticky;top:0;z-index:30;padding-top:env(safe-area-inset-top,0px);background:rgba(255,255,255,.92);-webkit-backdrop-filter:saturate(1.4) blur(12px);backdrop-filter:saturate(1.4) blur(12px);border-bottom:1px solid var(--linha)}
 .topo .wrap{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}
-.topo .logo img{height:36px;width:auto}
+.topo .logo img{height:44px;width:auto}
 .nav{display:flex;gap:32px;font-size:17px;font-weight:500}
 .nav a{color:var(--tinta);text-decoration:none;padding-bottom:3px;background:linear-gradient(var(--pet),var(--pet)) 0 100%/0 1px no-repeat;transition:background-size .4s ease}
 .nav a:hover{background-size:100% 1px}
@@ -55,7 +56,7 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--pet);outline-offse
 .menu nav{position:absolute;right:0;top:54px;background:#fff;border:1px solid var(--linha);border-radius:2px;padding:12px;display:flex;flex-direction:column;min-width:220px}
 .menu nav a{padding:12px 14px;color:var(--tinta);text-decoration:none;font-weight:500}
 .menu nav a:hover{background:var(--nevoa)}
-@media (max-width:760px){.nav{display:none}.menu{display:block}.topo .logo img{height:30px}}
+@media (max-width:760px){.nav{display:none}.menu{display:block}.topo .logo img{height:36px}}
 
 /* abertura */
 .hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(0,.55fr);gap:48px;align-items:end;padding-top:128px;padding-bottom:136px}
@@ -128,11 +129,11 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--pet);outline-offse
 .rodape{border-top:1px solid rgba(155,199,207,.5)}
 .rodape .wrap{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:20px 32px;padding-top:28px;padding-bottom:32px;font-size:15px}
 .rodape .ass{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
-.rodape .ass img{height:28px;width:auto}
+.rodape .ass img{height:34px;width:auto}
 .rodape .slogan{font-weight:500;font-size:16px;text-wrap:balance}
 .rodape .end{display:flex;align-items:center;gap:22px;flex-wrap:wrap}
 .rodape .end a{display:inline-flex;opacity:.88;transition:opacity .2s}.rodape .end a:hover{opacity:1}
-.rodape .end img{height:34px;width:auto}
+.rodape .end img{height:30px;width:auto}
 .rodape .filete{width:1px;height:30px;background:var(--agua)}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .legal{padding-bottom:calc(28px + env(safe-area-inset-bottom,0px));font-size:13px;line-height:1.6;color:#fff;display:block!important;text-align:center}
@@ -149,6 +150,14 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--pet);outline-offse
   .js .rv{opacity:1!important;transform:none!important;transition:none!important}
   .js .janela img{transform:none!important;transition:none!important}
 }
+
+/* princípios: linha que se desenha ao passar */
+.valor{position:relative}
+.valor::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:2px;background:var(--pet);transform:scaleX(0);transform-origin:left;transition:transform .9s cubic-bezier(.2,.7,.2,1)}
+.valor h3{transition:transform .6s cubic-bezier(.2,.7,.2,1)}
+.valor p{transition:color .6s ease}
+@media (hover:hover){.valor:hover::after{transform:scaleX(1)}.valor:hover h3{transform:translateX(10px)}.valor:hover p{color:var(--tinta)}}
+@media (prefers-reduced-motion:reduce){.valor::after,.valor h3{transition:none}}
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Grupo Ávila Goulart","legalName":"Ávila Goulart, Unipessoal Lda","taxID":"513484132","foundingDate":"2015","url":"https://avilagoulart.pt/","image":"https://avilagoulart.pt/img/partilha.jpg","description":"Empresa familiar das Lajes do Pico, Açores, com duas marcas: GOALart e Atlanticus Guarida.","email":"geral@avilagoulart.pt","address":{"@type":"PostalAddress","streetAddress":"Rua Dr. Machado Serpa, 9","postalCode":"9930-146","addressLocality":"Lajes do Pico","addressRegion":"Açores","addressCountry":"PT"},"brand":[{"@type":"Brand","name":"GOALart","url":"https://goalart.pt/"},{"@type":"Brand","name":"Atlanticus Guarida","url":"https://atlanticusguarida.pt/"}]}</script>
 <script>document.documentElement.classList.add('js');</script>
@@ -156,7 +165,7 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--pet);outline-offse
 <body>
 <a class="saltar" href="#origem">Saltar para o conteúdo</a>
 <header class="topo"><div class="wrap">
-<a class="logo" href="#topo" aria-label="Grupo Ávila Goulart, início"><img src="img/avilagoulart_horizontal_positivo.svg" alt="Grupo Ávila Goulart" width="128" height="36"></a>
+<a class="logo" href="#topo" aria-label="Grupo Ávila Goulart, início"><img src="img/avilagoulart_horizontal_positivo.svg" alt="Grupo Ávila Goulart" width="157" height="44"></a>
 <nav class="nav" aria-label="Principal"><a href="#origem">Origem</a><a href="#marcas">Marcas</a><a href="#valores">Como trabalhamos</a><a href="#contacto">Contacto</a></nav>
 <details class="menu"><summary aria-label="Abrir o menu"><span class="barras" aria-hidden="true"></span>Menu</summary>
 <nav aria-label="Principal (telemóvel)"><a href="#origem">Origem</a><a href="#marcas">Marcas</a><a href="#valores">Como trabalhamos</a><a href="#contacto">Contacto</a></nav></details>
@@ -228,8 +237,8 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--pet);outline-offse
 <p class="nota">Para consultoria ou coaching, contacte a <a href="https://goalart.pt/#contacto" target="_blank" rel="noopener">GOALart</a>.<br>Para imóveis, contacte a <a href="https://atlanticusguarida.pt/#contacto" target="_blank" rel="noopener">Atlanticus Guarida</a>.</p>
 </div>
 <footer class="rodape"><div class="wrap">
-<div class="ass"><img src="img/avilagoulart_horizontal_negativo.svg" alt="Grupo Ávila Goulart" width="100" height="28"><span class="slogan">Duas formas de transformar. A mesma origem.</span></div>
-<div class="end"><a href="https://atlanticusguarida.pt/" target="_blank" rel="noopener" aria-label="Atlanticus Guarida (abre noutra janela)"><img src="img/atlanticusguarida_vertical_negativo.svg" alt="" width="28" height="34"></a><span class="filete" aria-hidden="true"></span><a href="https://goalart.pt/" target="_blank" rel="noopener" aria-label="GOALart (abre noutra janela)"><img src="img/goalart_vertical_negativo.svg" alt="" width="32" height="34"></a></div>
+<div class="ass"><img src="img/avilagoulart_horizontal_negativo.svg" alt="Grupo Ávila Goulart" width="121" height="34"><span class="slogan">Duas formas de transformar. A mesma origem.</span></div>
+<div class="end"><a href="https://atlanticusguarida.pt/" target="_blank" rel="noopener" aria-label="Atlanticus Guarida (abre noutra janela)"><img src="img/atlanticusguarida_horizontal_negativo.svg" alt="" width="70" height="30"></a><span class="filete" aria-hidden="true"></span><a href="https://goalart.pt/" target="_blank" rel="noopener" aria-label="GOALart (abre noutra janela)"><img src="img/goalart_horizontal_negativo.svg" alt="" width="85" height="30"></a></div>
 </div><div class="wrap legal"><p>ÁVILA GOULART, UNIPESSOAL LDA · Sede: Rua Dr. Machado Serpa, n.º 9, 9930-146 Lajes do Pico</p><p>Capital social: 5.000,00 € · NIPC e matrícula na Conservatória do Registo Comercial: 513484132</p><p><a href="privacidade.html">Política de privacidade</a> · <a href="https://www.livroreclamacoes.pt/Inicio/" target="_blank" rel="noopener">Livro de Reclamações Eletrónico</a> · Resolução alternativa de litígios: <a href="https://www.consumidor.gov.pt/" target="_blank" rel="noopener">Portal do Consumidor</a></p></div>
 </footer>
 </section>
