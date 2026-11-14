@@ -96,7 +96,8 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--pet);outline-offse
 .marca+.marca{border-left:1px solid rgba(155,199,207,.5)}
 @media (max-width:760px){.marca{padding:44px 0 8px}.marca+.marca{border-left:0;border-top:1px solid rgba(155,199,207,.5);padding-left:0}}
 .marca .o-que{font-size:clamp(30px,3vw,44px);line-height:1.08;letter-spacing:-.025em;font-weight:600}
-.marca p{margin-top:18px;max-width:25em;font-size:18px;flex:1 0 auto}
+.marca p{margin-top:18px;width:100%;max-width:20em;font-size:18px;flex:1 0 auto;text-align:center}
+@media (min-width:861px){.marca p{text-align:justify;text-align-last:center}}
 .marca .logo-marca{margin-top:40px;margin-bottom:24px;height:120px;display:flex;align-items:flex-end;justify-content:center;padding-bottom:14px;box-sizing:content-box;background:linear-gradient(var(--agua),var(--agua)) 50% 100%/0 1px no-repeat;transition:transform .4s cubic-bezier(.2,.7,.2,1),background-size .4s ease}
 .marca .logo-marca:hover,.marca .logo-marca:focus-visible{transform:translateY(-4px);background-size:60% 1px}
 .marca .logo-marca:focus-visible{outline:3px solid #fff;outline-offset:6px}
@@ -199,7 +200,7 @@ a:focus-visible,summary:focus-visible{outline:3px solid var(--pet);outline-offse
 
 <section id="marcas" class="esc marcas">
 <div class="wrap">
-<h2 class="t-l rv">O que transformamos</h2>
+<h2 class="t-l rv">O que transformamos?</h2>
 <p class="intro rv">Cada marca tem o seu site. Clique no logótipo para o visitar.</p>
 <div class="duas">
 <article class="marca rv">
